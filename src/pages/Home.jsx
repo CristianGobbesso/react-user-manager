@@ -39,6 +39,7 @@ const Home = () => {
     setusers((prevusers) =>
       prevusers.filter((user) => user.id !== id)
     );
+    setSearch("");
   };
 
   const filteredUsers = users.filter(user =>
