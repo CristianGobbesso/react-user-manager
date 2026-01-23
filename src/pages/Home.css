@@ -1,0 +1,44 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.home-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.home-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.home-actions button:hover {
+  background-color: #ccc;
+}
+
+.home-info {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.state {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.state.error {
+  color: #e74c3c;
+}

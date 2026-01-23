@@ -1,3 +1,4 @@
+import "./Home.css";
 import { useEffect, useState } from "react";
 import SearchInput from "../components/SearchInput";
 import UserList from "../components/UserList";
@@ -31,6 +32,10 @@ const Home = () => {
   }, []);
 
   const handleDeleteuser = (id) => {
+    const confirmDelete = window.confirm("¿Seguro que quieres eliminar este usuario?")
+
+    if (!confirmDelete) return;
+
     setusers((prevusers) =>
       prevusers.filter((user) => user.id !== id)
     );
@@ -45,31 +50,31 @@ const Home = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <>
-      <h1>Gestión de Usuarios</h1>
+    <div className="home">
+      <h1 className="home-title">Gestión de Usuarios</h1>
 
       <SearchInput
         search={search}
         setSearch={setSearch}
       />
-
-      <button onClick={() => setSearch("")}>
-        Limpiar búsqueda
-      </button>
-
-      <p>
+      <div className="home-actions">
+        <button onClick={() => setSearch("")}>
+          Limpiar búsqueda
+        </button>
+      </div>
+      <p className="home-info">
         Mostrando {filteredUsers.length} de {users.length} usuarios
       </p>
 
       {filteredUsers.length === 0 ? (
-        <p>No hay usuarios para mostrar</p>
+        <p className="state">No hay usuarios para mostrar</p>
       ) : (
         <UserList
           users={filteredUsers}
           onDelete={handleDeleteuser}
         />
       )}
-    </>
+    </div>
   );
 };
 

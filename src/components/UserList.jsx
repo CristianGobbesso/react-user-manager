@@ -1,4 +1,4 @@
-
+import  './UserList.css'
 import UserItem from "./UserItem";
 
 const UserList = ({ users = [],  onDelete }) => {
@@ -11,7 +11,7 @@ const UserList = ({ users = [],  onDelete }) => {
 
 
 return (
-    <ul>
+    <ul className="user-list">
       {users.map((user) => (
         <UserItem
           key={user.id}

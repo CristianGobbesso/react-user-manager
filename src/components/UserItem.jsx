@@ -1,13 +1,17 @@
+import './UserItem.css';
 
 const UserItem = ({user,onDelete}) =>{
     return (
-        <li>
-            
-            <span>
+        <li className="user-item">
+            <div className="user-info">
+            <span className="user-name user-email">
                 {user.name} ({user.email} ) 
             </span>
-
-            <button onClick={()=> onDelete(user.id)}>
+            </div>
+            <button 
+            className="delete-btn"
+             onClick={()=> onDelete(user.id)}
+             >
                 Eliminar
             </button>
 
