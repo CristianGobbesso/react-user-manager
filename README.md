@@ -1,16 +1,131 @@
-# React + Vite
+Gestión de Usuarios / User Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📌 Descripción
 
-Currently, two official plugins are available:
+Aplicación desarrollada con React que permite gestionar una lista de usuarios obtenidos desde una API externa. Incluye funcionalidades de búsqueda, eliminación de usuarios y manejo de estados de carga y error.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto fue creado con el objetivo de practicar y demostrar conceptos fundamentales de React a nivel junior, con foco en una arquitectura clara, componentes reutilizables y buena experiencia de usuario.
 
-## React Compiler
+⚙️ Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Obtener usuarios desde una API
 
-## Expanding the ESLint configuration
+Mostrar nombre y email de cada usuario
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Buscar usuarios por nombre o email
+
+Eliminar usuarios con confirmación previa
+
+Resetear la búsqueda automáticamente al eliminar un usuario
+
+Botón para limpiar la búsqueda manualmente
+
+Manejo de estados de carga y error
+
+🧱 Tecnologías utilizadas
+
+React
+
+JavaScript (ES6+)
+
+CSS plano
+
+Fetch API
+
+📁 Estructura del proyecto
+src/
+ ├─ components/     # Componentes reutilizables
+ ├─ pages/          # Vistas principales
+ ├─ services/       # Lógica de acceso a datos (API)
+ ├─ App.jsx
+ ├─ App.css
+ └─ index.css
+
+🚀 Cómo ejecutar el proyecto
+
+Clonar el repositorio
+
+Instalar dependencias
+
+npm install
+
+Iniciar el proyecto
+
+npm run dev
+
+🌐 Demo
+
+La aplicación está desplegada y disponible en:
+
+👉 https://gestion-de-usuarios.netlify.app/
+
+🧠 Notas
+
+No se utiliza backend propio, las operaciones de borrado son simuladas en el estado local.
+
+
+
+English:
+
+📌 Description
+
+This is a React application that allows managing a list of users fetched from an external API. It includes search, user deletion, and proper handling of loading and error states.
+
+The project was built to practice and demonstrate junior-level React concepts, focusing on clean architecture, reusable components, and good user experience.
+
+⚙️ Features
+
+Fetch users from an external API
+
+Display user name and email
+
+Search users by name or email
+
+Delete users with confirmation
+
+Automatically reset search after deleting a user
+
+Manual search reset button
+
+Loading and error state handling
+
+🧱 Technologies used
+
+React
+
+JavaScript (ES6+)
+
+Plain CSS
+
+Fetch API
+
+📁 Project structure
+src/
+ ├─ components/     # Reusable components
+ ├─ pages/          # Main views
+ ├─ services/       # Data access logic (API)
+ ├─ App.jsx
+ ├─ App.css
+ └─ index.css
+
+🚀 How to run the project
+
+-Clone the repository
+
+-Install dependencies
+
+npm install
+
+-Start the project
+
+npm run dev
+
+🌐 Live Demo
+
+The application is deployed and available at:
+
+👉 https://gestion-de-usuarios.netlify.app/
+
+🧠 Notes
+
+No custom backend is used; delete operations are simulated in local state.
